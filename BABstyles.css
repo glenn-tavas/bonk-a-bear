@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;   
+    background-color: #F5DCE0;
+    cursor: url('mallet.jpg') 32 32; /* Specify a custom image and size */
+}
+
+#gameCanvas {
+    display: block;
+    margin: 20px auto;
+    border: none;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #FFF1F2; /* Set the background color to the specified RGB value */
+}
+
+.score {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #990F02;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center; /* Center-align the text */
+    padding-top: 20px; /* Add padding for spacing */
+}
+
+footer p {
+    margin: 0; /* Remove default margin to control spacing */
+}
+
+.red-text {
+    color: darkred;
+}
