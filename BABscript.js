@@ -103,10 +103,18 @@ function drawGrid() {
     }
 }
 
+let previousBearPosition = { row: -1, col: -1 }; // Initialize with an invalid position
+
 function moveBearRandomly() {
-    const newRow = Math.floor(Math.random() * numRows);
-    const newCol = Math.floor(Math.random() * numCols);
+    let newRow, newCol;
+
+    do {
+        newRow = Math.floor(Math.random() * numRows);
+        newCol = Math.floor(Math.random() * numCols);
+    } while (newRow === previousBearPosition.row && newCol === previousBearPosition.col);
+
     bearPosition = { row: newRow, col: newCol };
+    previousBearPosition = { ...bearPosition }; // Store the current bear position
     bearClicked = false; // Reset bearClicked flag
     
     clearCanvas();
@@ -114,9 +122,6 @@ function moveBearRandomly() {
     
     setTimeout(moveBearRandomly, bearInterval);
 }
-
-
-
 
 function resetScore() {
     score = 0;
